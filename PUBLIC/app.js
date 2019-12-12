@@ -12,7 +12,7 @@ function indexPage(){
     createIndexPage.id = 'targetArea'
 
     const indexPageMain = document.getElementById('targetArea')
-    // Constructing the layout
+
     indexPageMain.innerHTML = (
         `<div class = 'contactList' id = 'contactList'>
             Contact List
@@ -25,7 +25,6 @@ function indexPage(){
         </div>`
     )
     
-    // Starting the counter
     var idCounter = 1
     for(var i =0; i < localStorage.length; i++) {
         var targetData = JSON.parse(localStorage.getItem(localStorage.key(i)))
@@ -33,57 +32,57 @@ function indexPage(){
         var rowDiv = document.createElement('div')
         rowDiv.id = `rowDiv${idCounter}`
         rowDiv.className = 'rowDiv'
-         // Constructs the row numbers.
+         
         var CreateNumSpan = document.createElement('span')
         CreateNumSpan.className = 'numSpan'
         CreateNumSpan.id = `numSpan${idCounter}`
-        // Constructs the row names.
+       
         var CreateNameSpan = document.createElement('span')
         CreateNameSpan.className = 'nameSpan'
-        // Constructs the row emails.
+       
         var CreateEmailSpan = document.createElement('span')
         CreateEmailSpan.className = 'emailSpan'
-        // Constructs the row phone numbers.
+      
         var CreatePhoneSpan = document.createElement('span')
         CreatePhoneSpan.className = 'phoneSpan'
-        // APPEND localStorage values to spans
+        
         CreateNumSpan.append(targetData.indexNum)
         CreateNameSpan.append(targetData.nameInfo)
         CreateEmailSpan.append(targetData.emailInfo)
         CreatePhoneSpan.append(targetData.phoneInfo)
-        // Creates the span to hold buttons
+        
         var buttonSpan = document.createElement('div')
         buttonSpan.className = 'indexButtonSpan'
-        // Creates the details button
+       
         var indexDetailsBtn = document.createElement('input')
         indexDetailsBtn.type = 'button'
         indexDetailsBtn.id = `indexDetailsBtn${idCounter}`
         indexDetailsBtn.className = 'indexDetailsBtn'
         indexDetailsBtn.value = 'DETAILS'
-        // Creates the edit button
+     
         var indexEditBtn = document.createElement('input')
         indexEditBtn.type = 'button'
         indexEditBtn.id = 'indexEditBtn'
         indexEditBtn.className = 'indexEditBtn'
         indexEditBtn.value = 'EDIT'
-        // Creates the delete button
+      
         var indexDeleteBtn = document.createElement('input')
         indexDeleteBtn.type = 'button'
         indexDeleteBtn.id = 'indexDeleteBtn'
         indexDeleteBtn.className = 'indexDeleteBtn'
         indexDeleteBtn.value = 'DELETE'
-        // Appends the buttons to button span
+        
         buttonSpan.append(indexDetailsBtn)
         buttonSpan.append(indexEditBtn)
         buttonSpan.append(indexDeleteBtn)
-        // Appends the data to a row.
+        
         rowDiv.append(CreateNumSpan)
         rowDiv.append(CreateNameSpan)
         rowDiv.append(CreateEmailSpan)
         rowDiv.append(CreatePhoneSpan)
         rowDiv.append(buttonSpan)
         rowDiv.append(document.createElement('br'))
-        // Appends the one row to the index page table.
+       
         indexPageMain.append(rowDiv)
     
         var recordInfo = {
@@ -116,21 +115,21 @@ function indexPage(){
             const iNum = e.target.parentNode.parentNode.children[0].innerHTML
             setTimeout(function(){removeItem(iNum,parentRow,dBtn)}, 10)  
         })
-        // Increment counter by 1.
+       
         idCounter++
     }
 }
-// Now call pre-defined function.
+
 indexPage();
 
 var highestIndexNum = 0
-// Declares top header buttons.
+
 const newButton = document.getElementById('newtab')
 const indexBtn = document.getElementById('index')
-// Declares node.
+
 content = document.getElementById('content')
 
-// Adds new contact function.
+
 newButton.addEventListener('click', function(e){
     const indexButton = document.getElementById('index')
     indexButton.style.backgroundColor = 'rgb(0, 152, 253)'
@@ -139,7 +138,7 @@ newButton.addEventListener('click', function(e){
     const newButton = document.getElementById('newtab')
     newButton.style.color = 'white'
     newButton.style.borderColor = 'white'
-    newButton.style.backgroundColor = 'rgb(0, 173, 253)'
+    newButton.style.backgroundColor = 'rgb(0, 152, 253)'
 
     const oldDiv = document.querySelector('.targetArea')
    
@@ -147,14 +146,14 @@ newButton.addEventListener('click', function(e){
     NewContactDiv.className = 'newContact'
     const NewContactText = document.createTextNode('New Contact')
     NewContactDiv.append(NewContactText)
-    // Creates the name form
+    
     var nameForm = document.createElement('input')
     nameForm.id = 'nameForm'
     nameForm.type = 'text'
     const nameLabel = document.createElement('div')
     nameLabel.className = 'formLabels'
     nameLabel.innerHTML = 'Name:'
-    // Creates the email form
+    
     const emailForm = document.createElement('input')
     emailForm.id = 'emailForm'
     emailForm.type = 'text'
@@ -162,7 +161,7 @@ newButton.addEventListener('click', function(e){
     emailLabel.className = 'formLabels'
     emailLabel.innerHTML = 'Email:'
 
-    // creates the phone form
+    
     const phoneForm = document.createElement('input')
     phoneForm.id = 'phoneForm'
     phoneForm.type = 'text'
@@ -170,7 +169,7 @@ newButton.addEventListener('click', function(e){
     phoneLabel.className = 'formLabels'
     phoneLabel.innerHTML = 'Phone:'
 
-    // creates the submit button 
+    
     const submitButton = document.createElement('input')
     submitButton.type = 'button'
     submitButton.value = 'Submit'
@@ -195,10 +194,7 @@ newButton.addEventListener('click', function(e){
     forms.append(submitButton)
     
     
-    mainDiv.append(forms)
-
-    //Insert submit button here. make type = button
-    
+    mainDiv.append(forms)    
 
     const name = document.getElementById('nameForm')
     const email = document.getElementById('emailForm')
@@ -210,23 +206,23 @@ newButton.addEventListener('click', function(e){
         const emailVal = email.value
         const phoneVal = phone.value
 
-        //does a name pattern check
+        
         const nameRegEx = /^./
         const nameTest = nameRegEx.test(nameVal)
         var nameError = ''
 
-        //does a email pattern check
+        
         const emailRegEx = /.+@.+\..+/
         const emailTest = emailRegEx.test(emailVal)
         var emailError = ''
 
-        //does a phone pattern check
+        
         const phoneRegEx = /^[2-9][0-9]{9}$/
         const phoneTest = phoneRegEx.test(phoneVal)
         var phoneError = ''
 
         const userInfo = {
-            indexNum : 0,//indexVal,
+            indexNum : 0,
             nameInfo : nameVal,
             emailInfo : emailVal,
             phoneInfo : phoneVal
@@ -275,7 +271,7 @@ newButton.addEventListener('click', function(e){
         }
     }
 })
-// Views the details of contact function.
+
 function detailsPage(userInfo){ 
     const indexButton = document.getElementById('index')
     indexButton.style.backgroundColor = 'rgb(255,105,180)'
@@ -294,7 +290,7 @@ function detailsPage(userInfo){
 
     content.replaceChild(displayInfoDiv, replaceThisDiv)
 
-    //creates the contact heading
+    
     const contactHeading = document.createElement('div')
     contactHeading.id = 'contactHeadingDiv'
     const contactText = document.createTextNode('Contact #')
@@ -304,7 +300,7 @@ function detailsPage(userInfo){
 
     contactHeading.append(cIndexNum)
 
-    //creates the name div
+    
     const cName = document.createElement('div')
     cName.className = 'labels'
     const cNameText = document.createTextNode('Name: ')
@@ -316,7 +312,7 @@ function detailsPage(userInfo){
     dNameSpan.append(userInfo.nameInfo)
     cName.append(dNameSpan)
 
-    //creates the email div
+   
     const cEmail = document.createElement('div')
     cEmail.className = 'labels'
     const cEmailText = document.createTextNode('Email: ')
@@ -328,7 +324,7 @@ function detailsPage(userInfo){
     dEmailSpan.append(userInfo.emailInfo)
     cEmail.append(dEmailSpan)
 
-    // Creates the phone div
+    
     const cPhone = document.createElement('div')
     cPhone.className = 'labels'
     const cPhoneText = document.createTextNode('Phone: ')
@@ -340,14 +336,14 @@ function detailsPage(userInfo){
     dPhoneSpan.append(userInfo.phoneInfo)
     cPhone.append(dPhoneSpan)
 
-    // Creates the edit button
+   
     const detailEditBtn = document.createElement('input')
     detailEditBtn.type = 'button'
     detailEditBtn.value = 'EDIT'
     detailEditBtn.className = 'detailEditBtn'
     detailEditBtn.id = 'detailEditBtn'
 
-    // Creates the delete button
+    
     const detailDeleteBtn = document.createElement('input')
     detailDeleteBtn.type = 'button'
     detailDeleteBtn.value = 'DELETE'
@@ -393,7 +389,7 @@ function detailsPage(userInfo){
         setTimeout(function(){removeItem(iNum,undefined,dBtn)},10)
     })
 }
-// Edits the contact function.
+
 function editPage(userInfo){
     const indexButton = document.getElementById('index')
     indexButton.style.backgroundColor = 'rgb(255,192,203)'
@@ -412,7 +408,7 @@ function editPage(userInfo){
 
     content.replaceChild(displayInfoDiv, replaceThisDiv)
 
-    // Constructs the contact heading.
+    
     const contactHeading = document.createElement('div')
     contactHeading.id = 'contactHeadingDiv'
     const contactText = document.createTextNode('Edit Contact #')
@@ -424,7 +420,7 @@ function editPage(userInfo){
     const editContent = document.createElement('div')
     editContent.className = 'editContent'
 
-    // Creates the name div.
+    
     const cName = document.createElement('div')
     cName.className = 'labels'
     const cNameText = document.createTextNode('Name: ')
@@ -433,7 +429,7 @@ function editPage(userInfo){
     cNameInputField.value = userInfo.nameInfo
     cNameInputField.id = 'cNameInputField'
     cNameInputField.className = 'cNameInputField'
-    // Construct the email div.
+    
     const cEmail = document.createElement('div')
     cEmail.className = 'labels'
     const cEmailText = document.createTextNode('Email: ')
@@ -443,7 +439,7 @@ function editPage(userInfo){
     cEmailInputField.id = 'cEmailInputField'
     cEmailInputField.className = 'cEmailInputField'
     
-    //create the phone div
+    
     const cPhone = document.createElement('div')
     cPhone.className = 'labels'
     const cPhoneText = document.createTextNode('Phone: ')
@@ -452,7 +448,7 @@ function editPage(userInfo){
     cPhoneInputField.value = userInfo.phoneInfo
     cPhoneInputField.id = 'cPhoneInputField'
     cPhoneInputField.className = 'cPhoneInputField'
-    //create the submit button
+    
     const editSubmitBtn = document.createElement('input')
     editSubmitBtn.type = 'button'
     editSubmitBtn.value = 'Submit'
@@ -469,19 +465,19 @@ function editPage(userInfo){
     editContent.append(document.createElement('br'))
     editContent.append(editSubmitBtn)
     displayInfoDiv.append(editContent)
-    //adds event listener
+    
     editSubmitBtn.addEventListener('click',function(e){
         const iNum = document.getElementById('contactHeadingDiv').childNodes[1].nodeValue
         const nameVal = cNameInputField.value
-        //does a name pattern check
+        
         const nameRegEx = /^./
         const nameTest = nameRegEx.test(nameVal)
         var nameError = ''
-        //does an email pattern check 
+        
         const emailRegEx = /.+@.+\..+/
         const emailTest = emailRegEx.test(cEmailInputField.value)
         var emailError = ''
-        //does a phone pattern check
+        
         const phoneRegEx = /^[2-9][0-9]{9}$/
         const phoneTest = phoneRegEx.test(cPhoneInputField.value)
         var phoneError = ''
@@ -509,10 +505,10 @@ indexBtn.addEventListener('click', function(e){
     var target = document.querySelector('.targetArea')
     indexPage(target);
 })
-// Loops through the records to find a specific contact.
+
 function findRecord(indexNumber){
     for(var i =0; i < localStorage.length; i++){
-        // Declare variables.
+
         var targetData = JSON.parse(localStorage.getItem(localStorage.key(i)))
         var storageKeyNum = localStorage.key(i)
 
@@ -527,7 +523,6 @@ function findRecord(indexNumber){
         }
     }
 }
-// Deletes the  contact information
 function removeItem(indexNumber, parentRow, dBtn){
     var confirmed = confirm('Delete this contact?')
 
