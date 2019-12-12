@@ -2,8 +2,8 @@ function indexPage(){
     const indexButton = document.getElementById('index')
     const newButton = document.getElementById('newtab')
     newButton.style.backgroundColor = 'rgb(255,192,203)'
-    newButton.style.color = 'lightgray'
-    newButton.style.borderColor = 'lightgray'
+    newButton.style.color = 'black'
+    newButton.style.borderColor = 'rgb(255,105,180)'
 
     var targetArea = document.querySelector('.targetArea')
 
@@ -132,13 +132,13 @@ content = document.getElementById('content')
 
 newButton.addEventListener('click', function(e){
     const indexButton = document.getElementById('index')
-    indexButton.style.backgroundColor = 'rgb(0, 152, 253)'
-    indexButton.style.color = 'lightgray'
-    indexButton.style.borderColor = 'lightgray'
+    indexButton.style.backgroundColor = 'rgb(255, 192, 203)'
+    indexButton.style.color = 'black'
+    indexButton.style.borderColor = 'rgb(255,105,180)'
     const newButton = document.getElementById('newtab')
-    newButton.style.color = 'white'
-    newButton.style.borderColor = 'white'
-    newButton.style.backgroundColor = 'rgb(0, 152, 253)'
+    newButton.style.color = 'black'
+    newButton.style.borderColor = 'rgb(255,105,180)'
+    newButton.style.backgroundColor = 'rgb(255, 192, 203)'
 
     const oldDiv = document.querySelector('.targetArea')
    
@@ -274,13 +274,13 @@ newButton.addEventListener('click', function(e){
 
 function detailsPage(userInfo){ 
     const indexButton = document.getElementById('index')
-    indexButton.style.backgroundColor = 'rgb(255,105,180)'
-    indexButton.style.color = 'lightgray'
-    indexButton.style.borderColor = 'lightgray'
+    indexButton.style.backgroundColor = 'rgb(255,192,203)'
+    indexButton.style.color = 'black'
+    indexButton.style.borderColor = 'rgb(255,105,180)'
     const newButton = document.getElementById('newtab')
-    newButton.style.backgroundColor = 'rgb(255,105,180)'
-    newButton.style.color = 'lightgray'
-    newButton.style.borderColor = 'lightgray'
+    newButton.style.backgroundColor = 'rgb(255,192,203)'
+    newButton.style.color = 'black'
+    newButton.style.borderColor = 'rgb(255,105,180)'
 
     var replaceThisDiv = document.querySelector('.targetArea')
 
@@ -393,12 +393,12 @@ function detailsPage(userInfo){
 function editPage(userInfo){
     const indexButton = document.getElementById('index')
     indexButton.style.backgroundColor = 'rgb(255,192,203)'
-    indexButton.style.color = 'lightgray'
-    indexButton.style.borderColor = 'lightgray'
+    indexButton.style.color = 'black'
+    indexButton.style.borderColor = 'rgb(255,105,180)'
     const newButton = document.getElementById('newtab')
     newButton.style.backgroundColor = 'rgb(255,192,203)'
-    newButton.style.color = 'lightgray'
-    newButton.style.borderColor = 'lightgray'
+    newButton.style.color = 'black'
+    newButton.style.borderColor = 'rgb(255,105,180)'
 
     var replaceThisDiv = document.querySelector('.targetArea')
 
