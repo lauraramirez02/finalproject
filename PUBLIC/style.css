@@ -124,8 +124,8 @@
   
   .indexDetailsBtn {
     margin-right: 4px;
-    border: 1.5px solid pink;
-    color: hotpink;
+    border: 1.5px solid hotpink;
+    color: black;
     background-color: var(--plain-white);
     border-radius: 4px;
     padding: 4px 8px;
@@ -135,7 +135,7 @@
   .indexEditBtn, .detailEditBtn {
     margin-right: 4px;
     border: 1.5px solid hotpink;
-    color: hotpink;
+    color: black;
     background-color: var(--plain-white);
     border-radius: 4px;
     padding: 4px 8px;
@@ -146,7 +146,7 @@
   .indexDeleteBtn, .deleteBtn {
     margin-right: 2px;
     border: 1.5px solid pink;
-    color: pink;
+    color:black;
     background-color: var(--plain-white);
     border-radius: 4px;
     padding: 4px 8px;
