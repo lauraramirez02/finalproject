@@ -1,5 +1,8 @@
 function indexPage(){
     const indexButton = document.getElementById('index')
+    indexButton.style.backgroundColor = 'rgb(255,192,203)'
+    indexButton.style.color = 'black'
+    indexButton.style.borderColor = 'rgb(255,105,180)'
     const newButton = document.getElementById('newtab')
     newButton.style.backgroundColor = 'rgb(255,192,203)'
     newButton.style.color = 'black'
