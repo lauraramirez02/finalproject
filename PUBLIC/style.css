@@ -12,7 +12,7 @@
     background: var(--greyish);
   }
   
-  /* HEADER SECTION */
+
     .headerBar{
       background-color: var(--red);
       margin-bottom: 20px;
@@ -37,7 +37,7 @@
       float: right;
     }
   
-  /* List box area */
+ 
   .targetArea {
     width: 75%;
     margin: auto;
