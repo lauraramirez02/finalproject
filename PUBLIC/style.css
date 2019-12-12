@@ -9,27 +9,28 @@
     /*margin: 0 auto;*/
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    background: var(--greyish);
+    background: pink;
   }
   
 
     .headerBar{
-      background-color: var(--red);
+      background-color: pink;
       margin-bottom: 20px;
-      border-top: 7px solid var(--plain-white);
-      border-bottom: 7px solid var(--plain-white);
+      border-top: 7px solid pink;
+      border-bottom: 7px solid pink;
     }
     .header{
       padding: 13px 20px 21px 15px;
-      font-size: 33px;
+      font-size: 44px;
+      font-weight: bold;
     }
     .headerTitle {
-      color:var(--plain-white);
+      color: black;
       padding-left: 10px;
     }
     .buttons{
-      background-color:var(--purple);
-      border: 1.5px solid var(--plain-white);
+      background-color: hotpink;
+      border: 1.5px solid hotpink;
       color: hotpink;
       font-size:20px;
       border-radius: 4px;
@@ -42,7 +43,7 @@
     width: 75%;
     margin: auto;
     padding: 20px 20px 40px 20px;
-    background-color: var(--plain-white);
+    background-color: pink;
     border-radius: 15px;
   }
   
@@ -60,7 +61,7 @@
     border-bottom: 1px solid hotpink;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: var(--bright-teal);
+    background: pink;
   }
   
   .num {
@@ -86,7 +87,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
-    background: var(--contact-bg-color);
+    background: pink;
   }
   
   .numSpan {
@@ -126,7 +127,7 @@
     margin-right: 4px;
     border: 1.5px solid hotpink;
     color: black;
-    background-color: var(--plain-white);
+    background-color: pink;
     border-radius: 4px;
     padding: 4px 8px;
     font-size: 16px;
@@ -136,7 +137,7 @@
     margin-right: 4px;
     border: 1.5px solid hotpink;
     color: black;
-    background-color: var(--plain-white);
+    background-color: pink;
     border-radius: 4px;
     padding: 4px 8px;
     font-size: 16px;
@@ -145,9 +146,9 @@
   
   .indexDeleteBtn, .deleteBtn {
     margin-right: 2px;
-    border: 1.5px solid magenta;
+    border: 1.5px solid deeppink;
     color:black;
-    background-color: var(--plain-white);
+    background-color: pink;
     border-radius: 4px;
     padding: 4px 8px;
     font-size: 16px;
@@ -155,7 +156,7 @@
   }
   
   .newContact, #contactHeadingDiv {
-    background-color: var(--contact-bg-color);
+    background-color: pink;
     padding: 15px 25px;
     margin-top: 8px;
     border: 1.5px solid hotpink;
@@ -187,9 +188,9 @@
   }
   
   #submitButton, .editSubmitBtn {
-    border: 1.5px solid var(--plain-white);
-    color: var(--bright-teal);
-    background-color: var(--plain-white);
+    border: 1.5px solid hotpink;
+    color: black;
+    background-color: pink;
     border-radius: 4px;
     padding: 8px 10px;
     font-size: 16px;
@@ -200,7 +201,7 @@
   
   .values {
     color:black;
-    background-color: var(--plain-white);
+    background-color: hotpink;
     border-radius: 4px;
     padding-left: 5px;
     padding-right: 5px;
