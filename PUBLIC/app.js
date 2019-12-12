@@ -278,11 +278,11 @@ newButton.addEventListener('click', function(e){
 // Views the details of contact function.
 function detailsPage(userInfo){ 
     const indexButton = document.getElementById('index')
-    indexButton.style.backgroundColor = 'rgb(0, 152, 253)'
+    indexButton.style.backgroundColor = 'rgb(255,105,180)'
     indexButton.style.color = 'lightgray'
     indexButton.style.borderColor = 'lightgray'
     const newButton = document.getElementById('newtab')
-    newButton.style.backgroundColor = 'rgb(0, 152, 253)'
+    newButton.style.backgroundColor = 'rgb(255,105,180)'
     newButton.style.color = 'lightgray'
     newButton.style.borderColor = 'lightgray'
 
