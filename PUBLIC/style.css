@@ -1,6 +1,6 @@
 :root {
     --white: pink;
-    --contact-bg-color: black;    
+    --contact-bg-color: pink;    
     --plain-white: pink;
     --black: #131212;
   }
@@ -145,7 +145,7 @@
   
   .indexDeleteBtn, .deleteBtn {
     margin-right: 2px;
-    border: 1.5px solid pink;
+    border: 1.5px solid magenta;
     color:black;
     background-color: var(--plain-white);
     border-radius: 4px;
